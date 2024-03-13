@@ -1,10 +1,10 @@
 const mysql = require("mysql");
 require("dotenv").config();
 
-const MYSQLUSER = proces.env.MYSQLUSER;
-const MYSQLPASSWORD = proces.env.MYSQLPASSWORD;
-const MYSQLHOST = proces.env.MYSQLHOST;
-const MYSQLPORT = proces.env.MYSQLPORT;
+const MYSQLUSER = process.env.MYSQLUSER;
+const MYSQLPASSWORD = process.env.MYSQLPASSWORD;
+const MYSQLHOST = process.env.MYSQLHOST;
+const MYSQLPORT = process.env.MYSQLPORT;
 const MYSQLDATABASE = process.env.MYSQLDATABASE;
 
 const urlDB = `mysql://${MYSQLUSER}:${MYSQLPASSWORD}@${MYSQLHOST}:${MYSQLPORT}/${MYSQLDATABASE}`;
