@@ -35,7 +35,7 @@ const registerController = async (req, res) => {
     res.status(201).json({ userId, token });
   } catch (e) {
     console.error(e);
-    res.status(400).json({ error: "Email alread exists" });
+    res.status(400).json({ error: "Email already exists" });
   }
 };
 
