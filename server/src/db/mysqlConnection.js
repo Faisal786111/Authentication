@@ -1,11 +1,15 @@
 const mysql = require("mysql");
+require("dotenv").config();
 
-const connection = mysql.createConnection({
-  host: process.env.HOST,
-  user: process.env.USERNAME,
-  password: process.env.PASSWORD,
-  database: process.env.DATABASE,
-});
+const MYSQLUSER = proces.env.MYSQLUSER;
+const MYSQLPASSWORD = proces.env.MYSQLPASSWORD;
+const MYSQLHOST = proces.env.MYSQLHOST;
+const MYSQLPORT = proces.env.MYSQLPORT;
+const MYSQLDATABASE = process.env.MYSQLDATABASE;
+
+const urlDB = `mysql://${MYSQLUSER}:${MYSQLPASSWORD}@${MYSQLHOST}:${MYSQLPORT}/${MYSQLDATABASE}`;
+
+const connection = mysql.createConnection(urlDB);
 
 connection.connect((error) => {
   if (error) {
